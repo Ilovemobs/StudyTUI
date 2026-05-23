@@ -1,0 +1,243 @@
+Screen {
+    background: $surface;
+}
+
+Header {
+    background: $primary;
+    color: $text;
+    text-style: bold;
+}
+
+Footer {
+    background: $panel;
+    color: $text-muted;
+}
+
+TabbedContent {
+    height: 100%;
+}
+
+TabPane {
+    padding: 1;
+}
+
+Button {
+    background: $primary;
+    color: $text;
+    border: none;
+    padding: 0 2;
+    min-width: 12;
+    &:hover {
+        background: $primary-lighten-1;
+    }
+    &:focus {
+        border: solid $accent;
+    }
+}
+
+Button.-danger {
+    background: $error;
+}
+
+Button.-success {
+    background: $success;
+}
+
+Input {
+    background: $surface;
+    color: $text;
+    border: solid $border;
+    padding: 0 1;
+    &:focus {
+        border: solid $accent;
+    }
+}
+
+TextArea {
+    background: $surface;
+    color: $text;
+    border: solid $border;
+}
+
+DataTable {
+    background: $surface;
+    color: $text;
+    border: solid $border;
+}
+
+DataTable > .datatable--header {
+    background: $primary;
+    color: $text;
+    text-style: bold;
+}
+
+Tree {
+    background: $surface;
+    color: $text;
+    border: solid $border;
+}
+
+Tree > .tree--label {
+    padding: 0 1;
+}
+
+Tree > .tree--highlight {
+    background: $accent 20%;
+}
+
+#sidebar {
+    background: $panel;
+    border: solid $border;
+    width: 30;
+    dock: left;
+}
+
+#content {
+    background: $surface;
+    padding: 1;
+}
+
+ListView {
+    background: $surface;
+    border: solid $border;
+}
+
+ListView > ListItem {
+    padding: 0 1;
+    &:hover {
+        background: $boost;
+    }
+}
+
+ListView > ListItem.-highlight {
+    background: $accent 30%;
+}
+
+#status-bar {
+    background: $panel;
+    color: $text-muted;
+    height: 1;
+    dock: bottom;
+    padding: 0 1;
+}
+
+#kanban-container {
+    height: 100%;
+}
+
+.kanban-column {
+    border: solid $border;
+    background: $surface;
+    min-width: 30;
+    height: 100%;
+}
+
+.kanban-column-title {
+    background: $primary-darken-1;
+    color: $text;
+    text-style: bold;
+    padding: 0 1;
+    height: 1;
+}
+
+.kanban-card {
+    background: $boost;
+    border: solid $border;
+    padding: 0 1;
+    margin: 0 1;
+    height: 3;
+}
+
+.kanban-card.-priority-0 { border-left: solid $error; }
+.kanban-card.-priority-1 { border-left: solid $warning; }
+.kanban-card.-priority-2 { border-left: solid $primary; }
+.kanban-card.-priority-3 { border-left: solid $success; }
+.kanban-card.-priority-4 { border-left: solid $border; }
+
+#timer-display {
+    content-align: center middle;
+    height: 5;
+    text-style: bold;
+}
+
+#timer-progress {
+    height: 1;
+    margin: 1 2;
+}
+
+#calendar-grid {
+    height: 100%;
+}
+
+.calendar-day {
+    border: solid $border;
+    min-width: 10;
+    min-height: 5;
+    padding: 0 1;
+}
+
+.calendar-day.-today {
+    border: solid $accent;
+}
+
+.calendar-day.-other-month {
+    background: $surface-darken-1;
+}
+
+#ai-chat-container {
+    height: 100%;
+}
+
+#ai-messages {
+    height: 1fr;
+    border: solid $border;
+    overflow-y: auto;
+}
+
+#ai-input {
+    dock: bottom;
+    height: 3;
+}
+
+.flashcard-card {
+    border: solid $border;
+    padding: 2;
+    height: 60%;
+    content-align: center middle;
+}
+
+.flashcard-question {
+    text-style: bold;
+    text-align: center;
+}
+
+.flashcard-answer {
+    text-align: center;
+}
+
+.settings-section {
+    border: solid $border;
+    padding: 1;
+    margin: 1 0;
+}
+
+.settings-section-title {
+    text-style: bold;
+    background: $primary-darken-1;
+    padding: 0 1;
+}
+
+#dashboard-panels {
+    height: 100%;
+}
+
+.dashboard-panel {
+    border: solid $border;
+    padding: 1;
+}
+
+.dashboard-panel-title {
+    text-style: bold;
+    background: $primary-darken-1;
+    padding: 0 1;
+}

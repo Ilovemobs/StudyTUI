@@ -1,0 +1,26 @@
+# Maintainer: Ayush Patel <ayush@example.com>
+# Contributor: Ayush Patel <ayush@example.com>
+
+pkgname=studytui-bin
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Study Tracker TUI with AI features — terminal-based notes, tasks, flashcards, pomodoro, and calendar"
+arch=('any')
+url="https://github.com/ayushp/studytui"
+license=('MIT')
+depends=('python' 'python-textual' 'python-requests' 'python-aiohttp')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/ayushp/studytui/archive/v$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+package() {
+  cd "$srcdir/studytui-$pkgver"
+  install -Dm755 main.py "$pkgdir/usr/bin/studytui"
+  install -Dm644 -t "$pkgdir/usr/lib/python3.14/site-packages/" *.py
+  install -Dm644 -t "$pkgdir/usr/lib/python3.14/site-packages/database/" database/*.py
+  install -Dm644 -t "$pkgdir/usr/lib/python3.14/site-packages/screens/" screens/*.py
+  install -Dm644 -t "$pkgdir/usr/lib/python3.14/site-packages/widgets/" widgets/*.py
+  install -Dm644 -t "$pkgdir/usr/lib/python3.14/site-packages/ai/" ai/*.py
+  install -Dm644 -t "$pkgdir/usr/lib/python3.14/site-packages/utils/" utils/*.py
+  install -Dm644 theme.tcss "$pkgdir/usr/lib/python3.14/site-packages/theme.tcss"
+  install -Dm644 README.md "$pkgdir/usr/share/doc/studytui/README.md"
+}
