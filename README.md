@@ -264,7 +264,7 @@ asyncio.run(test())
 
 ## License
 
-MIT © Ayush Patel
+Apache 2.0
 
 ---
 
