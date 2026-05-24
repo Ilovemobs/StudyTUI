@@ -74,14 +74,7 @@
 
 ## Installation
 
-### pip / pipx (recommended)
-```bash
-pipx install studytui
-# or
-pip install studytui
-```
-
-### From source
+### From source (The only one)
 ```bash
 git clone https://github.com/ayushp/studytui
 cd studytui
@@ -89,14 +82,6 @@ pip install -e .
 studytui
 ```
 
-### Arch Linux (AUR)
-```bash
-# Binary package
-yay -S studytui-bin
-
-# Or build from source
-yay -S studytui-git
-```
 
 ### Dependencies
 - Python ≥ 3.10
